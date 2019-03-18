@@ -1,26 +1,16 @@
 <template>
-  <div class="hello">
+  <div class="om">
     <h1>{{ msg }}</h1>
-  <p>HOME
-    HOME
-    HOME
-    HOME
-    HOME
-    HOME
-    HOME
-    HOME
-    HOME
-    
-    </p>
+ 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'home',
+  name: 'CV',
   data () {
     return {
-      msg: 'We CV'
+      msg: 'We Om'
     }
   }
 }

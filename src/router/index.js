@@ -4,10 +4,12 @@ import Home from '@/components/Home'
 import CV from '@/components/CV'
 import PersonligtBrev from '@/components/PersonligtBrev'
 import Kontakt from '@/components/Kontakt'
+import Om from '@/components/Om'
 
 Vue.use(Router)
 
 export default new Router({
+
   routes: [
     {
       path: '/',
@@ -28,6 +30,11 @@ export default new Router({
       path: '/Kontakt',
       name: 'Kontakt',
       component: Kontakt
+    },
+    {
+      path: '/Om',
+      name: 'Om',
+      component: Om
     }
   ]
 })

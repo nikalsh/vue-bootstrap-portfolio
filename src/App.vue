@@ -2,21 +2,43 @@
   <div id="app">
     <NavBar></NavBar>
     <router-view></router-view>
+    <div class="fixed-bottom">
+    <Social></Social>
+
+      <LIACounter></LIACounter>
+    </div>
+
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar'
+import LIACounter from './components/LIACounter'
+import Social from './components/Social'
 
 export default {
   name: 'app',
   components: {
-    NavBar: NavBar
+    NavBar: NavBar,
+    LIACounter: LIACounter,
+    Social: Social
   }
 }
 </script>
 
-<style>
+<style scoped>
+:root {
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: lightgray;
+}
+
 #app {
   font-family: "Avenir", "Calibri", "Gill Sans", "Garamond" "Cambria",
     sans-serif;
@@ -25,18 +47,13 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-body {
-  padding: 0;
-  margin: 0;
-  background-color: white;
-}
-:root {
-  padding: 0;
-  margin: 0;
-  overflow-y: scroll;
-}
 
-h1, h2 {
+.bg-primary {
+  background-color: transparent !important;
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+h1,
+h2 {
   font-weight: normal;
 }
 
@@ -53,4 +70,6 @@ li {
 a {
   color: #42b983;
 }
+
+
 </style>

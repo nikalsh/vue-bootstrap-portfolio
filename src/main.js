@@ -6,6 +6,13 @@ import App from './App'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { library } from '@fortawesome/fontawesome-svg-core'
+// import { faFacebookF } from '@fortawesome/free-solid-svg-icons'
+import { faJs, faVuejs, faNodeJs, faGithub, faGithubAlt, faGithubSquare, faLinkedin, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faJs, faVuejs, faNodeJs, faGithub, faGithubAlt, faGithubSquare, faLinkedin, faLinkedinIn)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
