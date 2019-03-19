@@ -5,16 +5,24 @@
   >
 
     <b-progress
+      id="tooltipButton-1"
       :max="value(nextValue).max"
       animated
       :variant="value(nextValue).variant"
     >
-      <b-progress-bar
-        :value="value(nextValue).current"
-        :label="value(nextValue).remaining.toString(10) + ' ' + value(nextValue).label + ' remaining'"
-      ></b-progress-bar>
+        <b-progress-bar
+          :value="value(nextValue).current"
+          :label="value(nextValue).remaining.toString(10) + ' ' + value(nextValue).label + ' till praktik'"
+        ></b-progress-bar>
     </b-progress>
 
+    <!-- <b-tooltip
+      :show.sync="show"
+      target="tooltipButton-1"
+      placement="top"
+    >
+      Hello <strong>World!</strong>
+    </b-tooltip> -->
   </div>
 
 </template>
@@ -29,7 +37,8 @@ export default {
       end: new Date('09/09/2019'),
       now: new Date(),
       interval: '',
-      nextValue: 3
+      nextValue: 0,
+      show: true
 
     }
   },
@@ -67,40 +76,40 @@ export default {
       let totSeconds = Math.ceil((totalDiff) / 1000)
 
       switch (val) {
-        case 0:
+        case 3:
           return {
             current: currentSeconds,
             remaining: 60 - currentSeconds,
             totRemaining: totSeconds - currentSeconds,
             max: 60,
-            label: 'seconds',
+            label: 'sekunder',
             variant: 'info'
           }
-        case 1:
+        case 2:
           return {
             current: currentMinutes,
             remaining: 60 - currentMinutes,
             totRemaining: totMinutes - currentMinutes,
             max: 60,
-            label: 'minutes',
+            label: 'minuter',
             variant: 'success'
           }
-        case 2:
+        case 1:
           return {
             current: currentHours,
             remaining: 24 - currentHours,
             totRemaining: totHours - currentHours,
             max: 24,
-            label: 'hours',
+            label: 'timmar',
             variant: 'warning'
           }
-        case 3:
+        case 0:
           return {
             current: currentDays,
             remaining: totDays - currentDays,
             totRemaining: totDays - currentDays,
             max: totDays,
-            label: 'days',
+            label: 'dagar',
             variant: 'danger'
           }
 
@@ -180,5 +189,9 @@ export default {
 #outer {
   background: transparent;
   background-color: rgba(0, 0, 0, 0);
+}
+
+#inner {
+  /* cursor: pointer; */
 }
 </style>

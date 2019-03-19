@@ -1,27 +1,21 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-  <p>HOME
-    HOME
-    HOME
-    HOME
-    HOME
-    HOME
-    HOME
-    HOME
-    HOME
+    <pdf src="./static/NiklasHelander.CV2019.pdf"></pdf>
     
-    </p>
   </div>
 </template>
 
 <script>
+import pdf from 'vue-pdf'
 export default {
   name: 'home',
   data () {
     return {
-      msg: 'We CV'
+      msg: 'CV'
     }
+  },
+  components: {
+    pdf
   }
 }
 </script>
@@ -29,4 +23,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+h1,
+h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 </style>

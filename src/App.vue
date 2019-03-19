@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-    <router-view></router-view>
+    <div class="router-view-wrapper">
+      <router-view></router-view>
+    </div>
     <div class="fixed-bottom">
-    <Social></Social>
+      <Social></Social>
 
       <LIACounter></LIACounter>
     </div>
@@ -26,17 +28,18 @@ export default {
 }
 </script>
 
-<style scoped>
+
+<style>
 :root {
   padding: 0;
-  margin: 0;
   overflow-y: scroll;
 }
 
 body {
   padding: 0;
   margin: 0;
-  background-color: lightgray;
+  background-color: rgb(226, 226, 226);
+  font-size: 1.1rem;
 }
 
 #app {
@@ -55,21 +58,20 @@ body {
 h1,
 h2 {
   font-weight: normal;
+  margin-top: 60px;
 }
 
 ul {
   list-style-type: none;
-  padding: 0;
+  /* padding: 0; */
 }
 
 li {
-  display: inline-block;
-  margin: 0 10px;
+  /* display: inline-block; */
+  /* margin: 0 10px; */
 }
 
 a {
   color: #42b983;
 }
-
-
 </style>

@@ -4,7 +4,7 @@
     <!-- <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'vuejs' }" /> -->
     <!-- <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'node-js' }" /> -->
 
-    <div class="text-right">
+    <div class="text-left">
       <a href="https://github.com/nikalsh">
         <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github-square' }" /> </a>
       <a href="https://www.linkedin.com/in/niklas-helander-b1ba8a16b/">
@@ -21,10 +21,11 @@ export default {
 
 <style scoped>
 #outer {
+  
 }
 .fa-w-14 {
   /* padding: 20px; */
-  font-size: 40px;
+  font-size: 35px;
   /* text-align: center; */
   /* text-decoration: none;  */
   transition: all 0.1s ease-in-out;
