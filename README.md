@@ -1,10 +1,10 @@
 # portfolio
 
-> Personal webapp / SPA / presentational
+- Personal demo portfolio page
 
-> Built with Vue.js + Vue-Boostrap
+- Built with Vue.js + Vue-Boostrap
 
-> Fully responsive
+- Fully responsive
 
 ## Build Setup
 
