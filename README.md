@@ -1,7 +1,9 @@
 # portfolio
 
 > Personal webapp / SPA / presentational
+
 > Built with Vue.js + Vue-Boostrap
+
 > Fully responsive
 
 ## Build Setup
